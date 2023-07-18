@@ -12,19 +12,18 @@ html {
 }
 
 body {
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   background-color: black;
   color: white;
 }
 
+.test {
+  height: 2000px;
+}
+
 .hero {
   height: 100vh;
-  background-image: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url(./images/hero.jpg);
+  background-image: linear-gradient(0deg, #0009, #0009), url(./images/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -38,14 +37,14 @@ body {
 
 .title {
   font-size: 5rem;
-  font-family: Lobster;
+  font-family: Lobster, cursive;
 }
 
 .subtitle {
   margin: 0;
 
   font-size: 1.5rem;
-  color: #dddd;
+  color: #ddd;
 }
 
 .hero-button {
@@ -61,4 +60,5 @@ body {
 
 .hero-button:hover {
   background-color: transparent;
+  color: red;
 }
