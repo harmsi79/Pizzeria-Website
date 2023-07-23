@@ -27,14 +27,14 @@ nav {
   align-items: center;
   height: 5rem;
   gap: 2rem;
-  padding: 0rem 1rem;
+  text-align: center;
 }
 
 .nav {
-  color: #ddd;
+  color: #fff;
   text-transform: uppercase;
-  text-decoration: none;
   transition: all 0.2s ease-in-out;
+  letter-spacing: 0.1rem;
 }
 
 .nav:hover {
@@ -69,18 +69,43 @@ nav {
 
 .hero-button {
   margin-top: 4rem;
+}
 
+.button {
+  display: inline-block;
   padding: 1rem 2rem;
-  border: 1px solid red;
+  border-bottom: 1px solid red;
   color: #fff;
   background-color: red;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
 
-.hero-button:hover {
+.button:hover {
   background-color: transparent;
   color: red;
+}
+
+.container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.heading {
+  margin: 2rem 0 1rem 0;
+  width: fit-content;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  border-bottom: 1px solid red;
+}
+
+.about-text {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.about-button {
+  margin-top: 2rem;
 }
 
 @media only screen and (min-width: 600px) {
@@ -88,14 +113,21 @@ nav {
     font-size: 4rem;
     line-height: 4rem;
   }
+
   .subtitle {
     font-size: 1.5rem;
   }
-  .hero-button {
+
+  .button {
     padding: 1.2rem 2.5rem;
   }
+
   nav {
     gap: 2rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
   }
 }
 
@@ -104,7 +136,14 @@ nav {
     font-size: 6rem;
     line-height: 6.5rem;
   }
+
   nav {
     gap: 4rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
   }
 }
