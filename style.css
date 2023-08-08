@@ -17,10 +17,6 @@ body {
   color: white;
 }
 
-.test {
-  height: 2000px;
-}
-
 nav {
   display: flex;
   justify-content: center;
@@ -30,15 +26,22 @@ nav {
   text-align: center;
 }
 
-.nav {
+.nav,
+.footer-item {
   color: #fff;
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
   letter-spacing: 0.1rem;
 }
 
-.nav:hover {
+.nav:hover,
+.footer-item:hover {
   color: red;
+}
+
+.footer-copyright {
+  margin-top: 1rem;
+  color: #ddd;
 }
 
 .hero {
@@ -71,10 +74,12 @@ nav {
   margin-top: 4rem;
 }
 
-.button {
+.button,
+.button-inverted {
+  width: fit-content;
   display: inline-block;
   padding: 1rem 2rem;
-  border-bottom: 1px solid red;
+  border: 1px solid red;
   color: #fff;
   background-color: red;
   text-decoration: none;
@@ -86,6 +91,15 @@ nav {
   color: red;
 }
 
+.button-inverted {
+  background-color: transparent;
+  color: red;
+}
+
+.button-inverted:hover {
+  background-color: red;
+  color: #fff;
+}
 .container {
   max-width: 85%;
   margin: 0 auto;
@@ -99,13 +113,122 @@ nav {
   border-bottom: 1px solid red;
 }
 
+.about-content {
+  display: flex;
+  flex-direction: column;
+}
+
 .about-text {
   font-size: 0.9rem;
   color: #ddd;
 }
+.about {
+  display: grid;
+  gap: 2rem;
+}
 
-.about-button {
+.about-action {
   margin-top: 2rem;
+}
+
+.about-images {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-image-large {
+  min-width: 50%;
+}
+
+.about-images-small {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.info-wrapper {
+  padding: 2rem 0;
+  margin: 3rem 0;
+  background-image: linear-gradient(0deg, #0009, #0009), url(./images/info.jpg);
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.info .heading {
+  margin: 0 auto;
+}
+
+.hours-entry {
+  display: flex;
+  justify-content: space-between;
+  width: 15rem;
+}
+.days {
+  color: #ddd;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact .heading {
+  margin-top: 0;
+}
+
+.contact-detail {
+  margin-top: 0.5rem;
+  color: #ddd;
+}
+
+.contact-action {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.contact-image {
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  background-color: #303030;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 @media only screen and (min-width: 600px) {
@@ -118,27 +241,98 @@ nav {
     font-size: 1.5rem;
   }
 
-  .button {
+  .button,
+  .button-inverted {
     padding: 1.2rem 2.5rem;
   }
 
-  nav {
+  nav,
+  .footer-links {
     gap: 2rem;
   }
-
+  .footer {
+    margin-top: 4rem;
+    padding: 3rem 0;
+    gap: 3rem;
+  }
+  .footer-links {
+    flex-direction: row;
+  }
   .about-text {
     font-size: 1rem;
   }
+
+  .contact-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .contact-image {
+    width: 60%;
+  }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1000px) {
   .title {
     font-size: 6rem;
     line-height: 6.5rem;
   }
 
-  nav {
+  nav,
+  .footer-links {
     gap: 4rem;
+  }
+
+  .footer {
+    margin-top: 6rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .about {
+    grid-template-columns: 0.5fr 1fr;
+    align-items: center;
+    margin-top: 6rem;
+  }
+
+  .about-images,
+  .about-images-small {
+    gap: 1rem;
+  }
+
+  .hours-entry {
+    width: 20rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hours {
+    margin-top: 2rem;
+  }
+
+  .info-wrapper {
+    margin: 8rem 0;
+    padding: 6rem 0;
+  }
+
+  .contact .heading {
+    margin-bottom: 2rem;
+  }
+
+  .contact-detail {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .contact-image {
+    width: 50%;
+  }
+
+  .contact-action {
+    flex-direction: row;
   }
 }
 
